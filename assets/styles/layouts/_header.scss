@@ -1,0 +1,123 @@
+header {
+	height: $nav-height;
+	position: absolute;
+	text-align: center;
+	top: 15px;
+	width: 100%;
+	z-index: 2;
+
+	@include transition(background-color, 0.4s, ease-in);
+
+	nav {
+		display: inline-block;
+		text-align: left;
+
+		.menu-navigation-left-side-container, .menu-navigation-right-side-container {
+			display: inline-block;
+			float: left;
+			width: 250px;
+
+			ul {	
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: $nav-height;
+				list-style: none;
+
+				li {
+					display: inline-block;
+					float: left;
+
+					a {
+						color: #fff;
+						font-family: $oswald;
+						font-weight: 400;
+						letter-spacing:1.2;
+						text-decoration: none;
+						text-transform: uppercase;
+					}
+				}
+			}
+
+			#menu-navigation-left-side {
+				float: right;
+			}
+
+			#menu-navigation-right-side {
+				float: left;
+			}
+
+		}
+
+		#logo {
+			display: inline-block;
+			float: left;
+			width: $nav-height;
+			padding: 10px;
+			@include transition(all, 0.4s, ease-in-out);
+			
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+.landing-background-wrap, .header-background-wrap {
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	z-index: -2;
+
+	.background, .background-filter {
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		bottom: -10px;
+		left: -10px;
+	}
+
+	.background-filter {
+		background: rgba(255,255,255,0.1);
+		z-index: 1;
+	}
+
+	.background {
+		background: url(../../assets/images/front-page-header.jpg) fixed;
+		background-size: cover;
+		z-index: 0;
+
+		filter: blur(3px);
+		-webkit-filter: blur(3px);
+		-moz-filter: blur(3px);
+		-o-filter: blur(3px);
+		-ms-filter: blur(3px);
+	}
+}
+
+
+.landing-background-wrap {
+	height: 100vh;
+	position: absolute;
+	top: 0;
+}
+
+.header-background-wrap {
+	height: 200px;
+	position: relative;
+}
+
+
+
+/*
+.stick {
+	position: fixed;
+	top: 0px;
+	height: 100px !important;
+}
+
+.shrink {
+	margin-top: 25px;
+	width: 110px !important;
+}*/

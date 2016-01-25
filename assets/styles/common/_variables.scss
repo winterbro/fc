@@ -1,0 +1,39 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+$brand-primary:         #27ae60;
+
+//Fonts
+@font-face {
+	font-family: 'Franklin Gothic Heavy Italic';
+	font-style: italic;
+	src: url('../fonts/franklin.tff'); 
+}
+
+//Mixins
+
+@mixin transition($property, $time, $type) {
+	-webkit-transition: $property $time $type;
+	-moz-transition: $property $time $type;
+	-ms-transition: $property $time $type;
+	-o-transition: $property $time $type;
+	transition: $property $time $type;
+}
+
+//
+$nav-height: 125px;
+$oswald : "Oswald", "Impact", sans-serif;
+$franklin : "Franklin Gothic Heavy Italic", "Arial Black", sans-serif;
+
+.bg-black {
+	background: black;
+}
+
+.bg-white {
+	background: white;
+}

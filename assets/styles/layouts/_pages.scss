@@ -1,0 +1,225 @@
+body {
+	overflow-y: scroll;
+}
+
+.row, .main {
+	padding: 0;
+	margin: 0;
+}
+
+section {
+	background: #fff;
+	margin: 0;
+	padding: 50px 0 0;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+.container {
+	width: 100%;
+	padding: 0;
+}
+
+.margins {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+.skew-left {
+	padding: 50px 0;
+	-webkit-transform: skew(0deg, -3deg);
+	transform: skew(0deg, -3deg);
+	margin-top: -50px;
+	clear: both;
+}
+
+.skew-right {
+	padding: 50px 0;
+	-webkit-transform: skew(0deg, 3deg);
+	transform: skew(0deg, 3deg);
+	margin-top: -50px;
+	clear: both;
+}
+
+body.home {
+	min-height: 1500px;
+
+	section.landing {
+		background: none;
+		height: 110vh;
+		position: relative;
+		overflow: hidden;
+
+			.landing-message {
+				width: 500px;
+				height: 400px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				z-index: 2;
+				margin: -150px 0 0 -250px;
+			}
+
+			.landing-message-text h1, p {
+				text-align: center;
+				font-family:"Bebas Neue";
+				color: #fff;
+			}
+
+			.landing-message-text h1 {
+				font-size: 100px;
+				line-height: 110px;
+			}
+
+			.landing-message-text p {
+				line-height: 85px;
+				font-size: 55px;
+				color: #ffffff;
+			}
+	}
+
+	section.welcome {
+		margin-top: -50px;
+		clear: both;
+	}
+
+	section.brewery {
+  		display: flex;
+
+  		.brewery-wrap {
+			display: flex;
+			align-items: center;
+			justify-content: center
+		}
+	}
+}
+
+body.our-beers {
+
+section.infinite-carousel {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  height: 100px;
+  -moz-transform: scale3d(1, 1, 1);
+  -ms-transform: scale3d(1, 1, 1);
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  background: #333333;
+}
+.infinite-carousel .slide {
+  float: left;
+  width: 150px;
+  height: 100px;
+  background: #666;
+  color: #aaa;
+}
+.infinite-carousel .slide.slide-current {
+  background: #444;
+  color: #fff;
+}
+.infinite-carousel .slide.slide-enable-animation {
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/*-- Controls --*/
+.carousel-control-previous,
+.carousel-control-next {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  line-height: 40px;
+  font-size: 11px;
+  text-align: center;
+}
+
+.carousel-control-previous {
+  left: 0;
+  right: auto;
+}
+
+.carousel-control-next {
+  left: auto;
+  right: 0;
+}
+
+
+	section.brewery {
+
+	}
+}
+
+q {
+	font-family: $franklin;
+	font-size: 30px;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+	q:before {
+		content:"«";
+		padding: 0 15px;
+	}
+
+	q:after {
+		content:"»";
+		padding: 0 15px;
+	}
+
+.section-image {
+
+
+	img {
+		width: 100%;
+	}
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	float: none;
+	margin: 0 auto;
+}
+
+
+#video-bg {
+	position: fixed;
+	top: 0; right: 0; bottom: 0; left: 0;
+	overflow: hidden;
+	z-index: 0;
+
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+}
+/* 1. No object-fit support: */
+@media (min-aspect-ratio: 16/9) {
+	#video-bg > video { height: 300%; top: -100%; }
+}
+@media (max-aspect-ratio: 16/9) {
+	#video-bg > video { width: 300%; left: -100%; }
+}
