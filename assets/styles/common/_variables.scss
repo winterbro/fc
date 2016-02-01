@@ -26,7 +26,7 @@ $brand-primary:         #27ae60;
 }
 
 //
-$nav-height: 125px;
+$nav-height: 150px;
 $oswald : "Oswald", "Impact", sans-serif;
 $franklin : "Franklin Gothic Heavy Italic", "Arial Black", sans-serif;
 
@@ -36,4 +36,8 @@ $franklin : "Franklin Gothic Heavy Italic", "Arial Black", sans-serif;
 
 .bg-white {
 	background: white;
+}
+
+.txt-red {
+	color: red;
 }

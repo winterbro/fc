@@ -9,8 +9,7 @@ body {
 
 section {
 	background: #fff;
-	margin: 0;
-	padding: 50px 0 0;
+	margin: 50px 0 0;
 	position: relative;
 	width: 100%;
 	z-index: 0;
@@ -47,36 +46,29 @@ body.home {
 
 	section.landing {
 		background: none;
-		height: 110vh;
+		height: 100vh;
 		position: relative;
 		overflow: hidden;
+		margin: 0;
+		padding: 0;
 
 			.landing-message {
-				width: 500px;
+				width: 1000px;
 				height: 400px;
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				z-index: 2;
-				margin: -150px 0 0 -250px;
-			}
-
-			.landing-message-text h1, p {
-				text-align: center;
-				font-family:"Bebas Neue";
-				color: #fff;
+				margin: -250px 0 0 -500px;
 			}
 
 			.landing-message-text h1 {
+				width:800px;
 				font-size: 100px;
 				line-height: 110px;
+				color: #fff;
 			}
 
-			.landing-message-text p {
-				line-height: 85px;
-				font-size: 55px;
-				color: #ffffff;
-			}
 	}
 
 	section.welcome {
@@ -96,69 +88,105 @@ body.home {
 }
 
 body.our-beers {
+	position: absolute;
 
-section.infinite-carousel {
-  position: relative;
-  overflow: hidden;
-  clear: both;
-  height: 100px;
-  -moz-transform: scale3d(1, 1, 1);
-  -ms-transform: scale3d(1, 1, 1);
-  -webkit-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
-  background: #333333;
-}
-.infinite-carousel .slide {
-  float: left;
-  width: 150px;
-  height: 100px;
-  background: #666;
-  color: #aaa;
-}
-.infinite-carousel .slide.slide-current {
-  background: #444;
-  color: #fff;
-}
-.infinite-carousel .slide.slide-enable-animation {
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
+	section.infinite-carousel {
+		margin:200px 0 -200px;
+		background: transparent;
+		position: relative;
+		overflow: hidden;
+		clear: both;
+		min-height:800px;
 
-/*-- Controls --*/
-.carousel-control-previous,
-.carousel-control-next {
-  display: block;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  line-height: 40px;
-  font-size: 11px;
-  text-align: center;
-}
+		-moz-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		-webkit-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
 
-.carousel-control-previous {
-  left: 0;
-  right: auto;
-}
-
-.carousel-control-next {
-  left: auto;
-  right: 0;
-}
+		.slide {
+			float: left;
+			width: 180px;
+			height: 650px;
+			color: #aaa;
+			opacity: 0.5;
+			padding: 10px;
 
 
-	section.brewery {
+			img {
+				margin: 0 10%;
+				padding: 0;
+				width: 80%;
+			}
+			.beer-title {
+				font-family: $franklin;
+			    font-size: 25px;
+			    font-style: italic;
+			    font-weight: 100;
+			    text-transform: uppercase;
+			}
+			.beer-type {
+				font-family: impact;
+				text-align: center;
+				font-size: 15px;
+			}
+		}
+		.slide.slide-current {
+			color: #fff;
+			opacity:0.90;
+		}
+		.slide.slide-enable-animation {
+			-moz-transition: all 0.5s ease-in-out;
+			-o-transition: all 0.5s ease-in-out;
+			-webkit-transition: all 0.5s ease-in-out;
+			transition: all 0.5s ease-in-out;
+		}
 
+
+		/*-- Controls --*/
+		.carousel-control-previous,
+		.carousel-control-next {
+			display: block;
+			width: 40px;
+			height: 40px;
+			position: absolute;
+			top: 200px;
+			margin: auto;
+			cursor: pointer;
+			background: rgba(0, 0, 0, 0.6);
+			color: #fff;
+			line-height: 40px;
+			font-size: 11px;
+			text-align: center;
+		}
+
+		.carousel-control-previous {
+			left: 0;
+			right: auto;
+		}
+
+		.carousel-control-next {
+			left: auto;
+			right: 0;
+		}
+
+	}
+
+	.beer-skew-left {
+		padding: 50px 0;
+		-webkit-transform: skew(0deg, -3deg);
+		transform: skew(0deg, -3deg);
+		margin-top: -50px;
+		clear: both;
+	}
+
+
+	section.beer-post {
+		background: #fff;
+  		display: flex;
+
+  		.beer-post-wrap {
+			display: block;
+		}
 	}
 }
 

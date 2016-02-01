@@ -24,6 +24,10 @@
 
   echo '<div class="landing-background-wrap">';
 
+} else if(is_page("our-beers")) {
+
+  echo '<div class="beers-background-wrap">';
+
 } else {
 
   echo '<div class="header-background-wrap">';

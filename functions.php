@@ -30,3 +30,10 @@ foreach ($sage_includes as $file) {
 unset($file, $filepath);
 
 
+
+function alternating_post_class($classes) {
+  global $wp_query;
+  $classes[] = ( $wp_query->current_post%2 === 0 ? 'odd' : 'even' );
+  return $classes;
+}
+add_filter('post_class', 'alternating_post_class');

@@ -64,7 +64,7 @@ header {
 }
 
 
-.landing-background-wrap, .header-background-wrap {
+.landing-background-wrap, .header-background-wrap, .beers-background-wrap {
 	width: 100%;
 	height: 0;
 	overflow: hidden;
@@ -84,30 +84,36 @@ header {
 	}
 
 	.background {
-		background: url(../../assets/images/front-page-header.jpg) fixed;
+		background: url(../../assets/images/front-page-header2.png) fixed;
 		background-size: cover;
 		z-index: 0;
 
-		filter: blur(3px);
-		-webkit-filter: blur(3px);
-		-moz-filter: blur(3px);
-		-o-filter: blur(3px);
-		-ms-filter: blur(3px);
+		// filter: blur(3px);
+		// -webkit-filter: blur(3px);
+		// -moz-filter: blur(3px);
+		// -o-filter: blur(3px);
+		// -ms-filter: blur(3px);
 	}
 }
 
 
 .landing-background-wrap {
+	min-height:800px;
 	height: 100vh;
 	position: absolute;
 	top: 0;
 }
 
 .header-background-wrap {
-	height: 200px;
+	height: 250px;
 	position: relative;
 }
 
+.beers-background-wrap {
+	position: absolute;
+	min-height:850px;
+
+}
 
 
 /*
