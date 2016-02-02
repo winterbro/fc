@@ -10,23 +10,33 @@
     <source src="<?php bloginfo('template_directory'); ?>/assets/videos/video.mp4" type="video/mp4" >
   </video>
 </div>
-    <div class="landing-message">
-    <img class="right" width="150" src="https://cdn6.bigcommerce.com/s-4dsnxp/templates/__custom/images/Hawthorn_Wit_Beer_Bottle.png">
+    <div class="landing-message text-center">
 
         <div class="landing-message-text">
-          <h1>We pride ourselves with making quality beer</h1>
-          <!-- <button class="btn btn-default">TAKE A LOOK</button> -->
-        </div>
+          <div class="line"></div>
+          <h1>We make quality beer<br>From quality materials</h1>
 
+          <button class="btn btn-default">BROWSE THE BEERS</button>
+        <div class="line"></div>
+
+        </div>
+        
+        
+        <div class="landing-bottles">
+          <img width="150" src="https://cdn6.bigcommerce.com/s-4dsnxp/templates/__custom/images/Hawthorn_Wit_Beer_Bottle.png">
+          <img width="150" src="https://cdn6.bigcommerce.com/s-4dsnxp/templates/__custom/images/Hawthorn_Wit_Beer_Bottle.png">
+          <img width="150" src="https://cdn6.bigcommerce.com/s-4dsnxp/templates/__custom/images/Hawthorn_Wit_Beer_Bottle.png">
+        </div>
     </div>
 </section>
 
 <section class="skew-left">
 </section>
-<br><br><br><br><br><br><br>
 <section class="welcome">
-    <div class="col-lg-5 text-center center">
-      <q>Welcome to Flying Couch Brewing</q>
+    <div class="col-lg-6 text-center center welcome-text">
+      <h1>Welcome to Flying Couch Brewing</h1> 
+      <div class="line"></div>
+      <div class="col-lg-8 center">
       <p>A danish craft brewery placed in the north western part of Copenhagen.</p>
       <p>
       Flying Couch Brewing was founded in 2011 by Peter Sonne later joined by Jannik Sahlholdt. 
@@ -35,6 +45,7 @@
       <p>
       The brewery is composed of a 4-kettle brewing equipment with a yearly capacity of 10.000 hL. 
       We brew handcrafted high quality beer with an edge. Inspired by all of the world we brew with passion and curiosity!</p>
+      </div>
     </div>
   </div>
 </section>
@@ -44,7 +55,7 @@
     <div class="col-lg-6 quote left">
       <q>Brewery in the heart of copenhagen</q>
       <br>
-      <button class="btn btn-default">CHECK IT OUT</button>
+      <button class="btn btn-default">TAKE THE TOUR</button>
     </div>
     <figure class="col-lg-6 section-image right">
       <img src="<?php bloginfo('template_directory'); ?>/assets/images/orken.jpg" />

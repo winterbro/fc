@@ -16,8 +16,12 @@
         wp_nav_menu(['theme_location' => 'right_navigation', 'menu_class' => 'nav']);
       endif;
       ?>
+      <div class="social">
+        <img height="30" src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png" />
+        <img height="30" src="https://thepolestar29.files.wordpress.com/2015/10/facebook-logo-png-transparent-background.png" />
+      </div>
     </nav>
-  </div>
+       </div>
 </header>
 
 <?php if(is_front_page() ) {
