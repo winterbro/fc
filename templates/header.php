@@ -17,8 +17,8 @@
       endif;
       ?>
       <div class="social">
-        <img height="30" src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png" />
-        <img height="30" src="https://thepolestar29.files.wordpress.com/2015/10/facebook-logo-png-transparent-background.png" />
+        <img height="25" src="https://cdn0.iconfinder.com/data/icons/shift-logotypes/32/Instagram-512.png" />
+        <img height="25" src="https://thepolestar29.files.wordpress.com/2015/10/facebook-logo-png-transparent-background.png" />
       </div>
     </nav>
        </div>

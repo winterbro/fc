@@ -6,7 +6,8 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // Colors
-$brand-primary:         #27ae60;
+$brand-primary:			black;	
+$brand-secondary:		#cc2251;
 
 //Fonts
 @font-face {
@@ -29,6 +30,10 @@ $brand-primary:         #27ae60;
 $nav-height: 150px;
 $oswald : "Oswald", "Impact", sans-serif;
 $franklin : "Franklin Gothic Heavy Italic", "Arial Black", sans-serif;
+$archivo : "Archivo Narrow", sans-serif;
+
+$montserrat : "Montserrat", sans-serif;
+$playfair : "Playfair Display", serif;
 
 .bg-black {
 	background: black;
@@ -38,6 +43,6 @@ $franklin : "Franklin Gothic Heavy Italic", "Arial Black", sans-serif;
 	background: white;
 }
 
-.txt-red {
-	color: red;
+.color-white {
+	color: #fff;
 }

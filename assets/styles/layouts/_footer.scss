@@ -1,5 +1,49 @@
 footer {
 	margin-top: -50px;
-	padding: 50px 0;
-	height: 150px;
+	padding: 0;
+	height: 200px;
+	font-family: $archivo;
+	
+	.copyright {
+		display: block;
+		padding: 15px 40px 0;
+		
+		font-size: 12px;
+		text-transform: uppercase;
+		color: white;
+		opacity: 0.5;
+		
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+
+	.nav {
+			margin: 25px 0 0 25px;
+		
+		li {
+			background: none;
+			a {
+				text-transform: uppercase;
+				color: #999;
+				padding: 4px 0;
+			}
+
+			a:hover {
+				background: none;
+				opacity: 0.5;
+			}
+		}
+	}	
+
+	.social {
+		margin-top: 65px;
+
+		img {
+			margin:5px 5px 8px 2px;
+		}
+	}
 }
+
+		
+	

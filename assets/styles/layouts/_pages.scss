@@ -1,6 +1,13 @@
 body {
 	overflow-y: scroll;
 }
+			
+h2 {
+	font-size: 30px;
+	font-family: $montserrat;
+    font-weight: 800;
+    text-transform: uppercase;
+}
 
 .row, .main {
 	padding: 0;
@@ -25,13 +32,26 @@ section {
 	margin: 0 auto;
 }
 
+.z0 {
+	position: relative;
+	z-index: 0;
+} 
+
+.z1 {
+	position: relative;
+	z-index: 1;
+}
+.z9 {
+	position: relative;
+	z-index: 999;
+}
 .btn {
-	background: #CD0000;
+	background: $brand-secondary;
 	border: 0;
 	font-family: $oswald;
 	color: #fff;
 	padding: 10px 16px;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 .skew-left {
@@ -102,47 +122,88 @@ body.home {
 	section.welcome {
 		margin-top: 30px;
 		clear: both;
+		padding-bottom: 120px;
 
 		.welcome-text {
-			
-			h1 {
-				font-family: $franklin;
-				font-size: 30px;
-				font-style: italic;
-				text-transform: uppercase;
-			}
-
 			p {
 				font-family: "Open Sans";
-				font-size: 14px;
+				font-size: 15px;
+				line-height: 1.5em;
+				color: #111;
+			}
+
+			a {
+				border-bottom: 1px solid #ccc;
+				
+				&:hover {
+					border-bottom: 1px solid #000;
+					text-decoration: none;
+				}
 			}
 		}
 
-		.line {
-			height: 3px;
-			width: 100px;
-			background: #CD0000;
-			margin: 20px auto;
-		}
+		
 
 	}
-
+.line {
+			height: 3px;
+			width: 100px;
+			background: $brand-secondary;
+			margin: 20px auto;
+		}
 	section.brewery {
+		margin: -50px 0 0;
   		display: flex;
 
   		.brewery-wrap {
+  			margin: 100px auto 75px;
+  			padding: 0 0 50px;
 			display: flex;
 			align-items: center;
 			justify-content: center
+
+			h2 {
+				color: #fff;
+			}
 		}
 	}
+
+	section.fc-map {
+		margin:-50px 0 -14px 0;
+		width: 100%;
+		
+		#map {
+		    height:600px;
+		    width:100%;
+		
+		    .gm-style-iw {
+		    	width: 200px !important;
+				border-radius: 2px 2px 0 0;
+			    * {
+			        display: block;
+			        width: 100%;
+			    }
+			    h4,  p {
+			        margin: 0;
+			        padding: 0;
+			    }
+			    a {
+			        color: #4272db;
+			    }
+			}
+		}
+	}
+
+
+
+// body.home end
 }
 
 body.our-beers {
 	position: absolute;
 
 	section.infinite-carousel {
-		margin:200px 0 -200px;
+		margin:200px auto -200px auto;
 		background: transparent;
 		position: relative;
 		overflow: hidden;
@@ -154,72 +215,119 @@ body.our-beers {
 		-webkit-transform: scale3d(1, 1, 1);
 		transform: scale3d(1, 1, 1);
 
+		.carousel-viewport {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%,-50%);
+		}
+
 		.slide {
 			float: left;
-			width: 180px;
-			height: 650px;
+			width: 190px;
+			height: 600px;
 			color: #aaa;
 			opacity: 0.5;
-			padding: 10px;
-
+			padding: 35px 10px;
+			@include transition (all, 0.2s, ease-in-out);
 
 			img {
 				margin: 0 10%;
 				padding: 0;
 				width: 80%;
 			}
-			.beer-title {
-				font-family: $franklin;
-			    font-size: 25px;
-			    font-style: italic;
-			    font-weight: 100;
-			    text-transform: uppercase;
-			}
-			.beer-type {
-				font-family: impact;
+			
+			a {	color: white}
+
+			.slide-text {
+				position: absolute;
+				top: 100px;
 				text-align: center;
-				font-size: 15px;
+
+				width: 85%;
+
+				.beer-title {
+					font-family: $montserrat;
+				    font-size: 18px;
+				    font-weight: 800;
+				    text-transform: uppercase;
+				}
+				
+				.line {
+					background: $brand-secondary;
+					height: 2px;
+					width: 3em;
+					margin: 0 auto;
+				}
+
+				.beer-type {
+					font-family: $archivo;
+					font-size: 15px;
+				}
 			}
 		}
 		.slide.slide-current {
 			color: #fff;
 			opacity:0.90;
+			padding: 0 0 35px;
+
+			.slide-text {
+							width: 100%;
+	
+				.beer-title {
+					white-space: nowrap;
+					font-size: 25px;
+					margin: 16px 0 8px;
+				}
+			}
 		}
 		.slide.slide-enable-animation {
-			-moz-transition: all 0.5s ease-in-out;
-			-o-transition: all 0.5s ease-in-out;
-			-webkit-transition: all 0.5s ease-in-out;
-			transition: all 0.5s ease-in-out;
+			@include transition (all, 0.5s, ease-in-out);
 		}
 
-
 		/*-- Controls --*/
-		.carousel-control-previous,
-		.carousel-control-next {
+		.arrow {
 			display: block;
 			width: 40px;
 			height: 40px;
 			position: absolute;
 			top: 200px;
+			background: transparent;
 			margin: auto;
 			cursor: pointer;
-			background: rgba(0, 0, 0, 0.6);
-			color: #fff;
-			line-height: 40px;
-			font-size: 11px;
-			text-align: center;
-		}
+			border-top: .4rem solid black;
+			border-right: .4rem solid black;
+			box-shadow: 0 0 0 lightgray;
+			@include transition (all, 0.2s, ease-in-out);
+			
+			&.left {
+				left: 25px;
+				right: auto;
+				transform: translate3d(0,-50%,0) rotate(-135deg);
+			}
 
-		.carousel-control-previous {
-			left: 0;
-			right: auto;
-		}
+			&.right {
+				left: auto;
+				right: 25px;
+				transform: translate3d(0,-50%,0) rotate(45deg);
+			}
+			
+			&:hover {
+				border-top: .4rem solid $brand-secondary;
+				border-right: .4rem solid $brand-secondary;
+				box-shadow: .2rem -.2rem 0 black;
 
-		.carousel-control-next {
-			left: auto;
-			right: 0;
-		}
+				&.left {
+					left: 10px;
+				}
 
+				&.right {
+					right: 10px;
+				}
+			}
+		}
 	}
 
 	.beer-skew-left {
@@ -227,13 +335,27 @@ body.our-beers {
 		-webkit-transform: skew(0deg, -3deg);
 		transform: skew(0deg, -3deg);
 		margin-top: -50px;
-		clear: both;
+		
 	}
 
 
-	section.beer-post {
+	section.beer-posts {
 		background: #fff;
   		display: flex;
+  		margin: -25px 0 50px;
+
+  		.scroll-top {
+  			position: absolute;
+			left: 50px;
+  			display: block;
+  			padding: 40px;
+  		}
+
+  		.sticky {
+			position: fixed;
+			top: 20px;
+			left: 50px;
+  		}
 
   		.beer-post-wrap {
 			display: block;
@@ -241,22 +363,22 @@ body.our-beers {
 	}
 }
 
-q {
-	font-family: $franklin;
-	font-size: 30px;
-	font-style: italic;
-	text-transform: uppercase;
+section.page-brewery {
+		background: #fff;
+  		
+
+  		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+
+.clearfix {
+	clear:both;
+	width:100%;
 }
 
-	q:before {
-		content:"«";
-		padding: 0 15px;
-	}
-
-	q:after {
-		content:"»";
-		padding: 0 15px;
-	}
 
 .section-image {
 

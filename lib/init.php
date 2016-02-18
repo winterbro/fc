@@ -20,7 +20,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
     'left_navigation' => __('Left', 'sage'),
-    'right_navigation' => __('Right', 'sage')
+    'right_navigation' => __('Right', 'sage'),
+    'mobile_navigation' => __('Mobile', 'sage'),
+    'footer_navigation' => __('Footer', 'sage')
   ]);
 
   // Add post thumbnails
